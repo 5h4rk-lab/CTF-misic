@@ -9,4 +9,4 @@ Disc:- Bases can do many more things. <b>
  file name baseisfun.txt
  
 ## Task3
-Disc:- hex can do lote more things!
+Disc:- hex can do lote more things! file:- bunch of numbers.txt
