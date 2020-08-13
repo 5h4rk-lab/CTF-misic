@@ -59,7 +59,7 @@ Disc:- Bases can do many more things. <b>
 Solution:-
 => from the name it self we can get to know it is a base encrypted text. <br>
 as description says base can do many more things that means it can also hide files <br>
-so using this [base to text](https://base64.guru/converter/decode/file) we can convert <br>
+so using this tool [base to file](https://base64.guru/converter/decode/file) we can convert <br>
 based text to a file then you will get a zip just brute force it with rockyou.txt <br>
 and the flag is yours. <br>
 
