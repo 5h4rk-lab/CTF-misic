@@ -1,4 +1,4 @@
-# Writeups of CTF made by _5h4rk_
+# Writeups of cybergrabs-CTF made by _5h4rk_
 
 ## TASK-1 
 Disc:- all you need is good observation power my friend. <br>
