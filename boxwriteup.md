@@ -89,3 +89,43 @@ ftp>
 ```
 going through every folder you will wind an hidden folder name .0xnair which has a file name 0xnair.zip <br>
 lets download that and unzip it but this is a password protected file lets crack it using `fcrackzip` <br>
+
+![image](https://github.com/5h4rk-lab/solutions_of_5h4rk/blob/master/fcrack.png)
+
+so decrypting the file gives us 2 more gpg encrypted files which we need to decrypt using gpg <br>
+decryption of gpb files <br>
+step1:- import the key <br>
+step2:- decrypt the id_rsa but this needs a password 
+
+as we remember that the famous saying `privacyismythmyfriend007#` will help you and this is the key for decryption.
+
+
+![image](https://github.com/5h4rk-lab/solutions_of_5h4rk/blob/master/decrypt.png)
+
+aha we decrypted it now we got the the id_rsa key its time to login but... wait what is the user name?? <br>
+by going back to message it was given that by 0xnair so this was the only username in the entair box lets go and try it out
+
+![user](https://github.com/5h4rk-lab/solutions_of_5h4rk/blob/master/user.png)
+
+boom you got the user shell its time to root!!! all you need to do is privilage escalation <br>
+first thing to be checked is to find what are the commads we can run as root using user
+command `sudo -l`
+
+```
+0xnair@esplong:~$ sudo -l
+Matching Defaults entries for 0xnair on esplong:
+    env_reset, exempt_group=sudo, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User 0xnair may run the following commands on esplong:
+    (root) NOPASSWD: /sbin/ip
+```
+
+so we got to know we can run ip as root using https://gtfobins.github.io/gtfobins/ip/#sudo we got to know we can privilage escalate to root with this commads 
+
+```
+sudo ip netns add foo
+sudo ip netns exec foo /bin/sh
+```
+![root](https://github.com/5h4rk-lab/solutions_of_5h4rk/blob/master/privilage.png)
+
+you got the root! happy hacking :)
